@@ -210,6 +210,11 @@ elif dataset == 'pHD':
     avg_path = './data/predict-hd/linearaverageof100.npz'
     n_condns = 3
 
+elif dataset == 'qsm':
+    fpath = '/mnt/FileSystem-DeepLearning/vnm/qsm28_data/npz_files/train_npz/*.npz'
+    avg_path = '/mnt/FileSystem-DeepLearning/vnm/qsm28_data/rbcscr_mean.npz'
+    n_condns = 1
+
 else:
     raise ValueError('dataset expected to be dHCP or pHD')
 
