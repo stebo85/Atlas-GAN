@@ -97,7 +97,7 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('--epochs', type=int, default=200)
 parser.add_argument('--batch_size', type=int, default=1)
-parser.add_argument('--dataset', type=str, default='dHCP')
+parser.add_argument('--dataset', type=str, default='qsm-simple')
 parser.add_argument('--name', type=str, default='experiment_name')
 parser.add_argument('--d_train_steps', type=int, default=1)
 parser.add_argument('--g_train_steps', type=int, default=1)
@@ -114,7 +114,7 @@ parser.add_argument(
     '--nonorm_reg', dest='norm_reg', default=True, action='store_false',
 )
 parser.add_argument(
-    '--oversample', dest='oversample', default=True, action='store_false',
+    '--oversample', dest='oversample', default=False, action='store_false',
 )
 parser.add_argument(
     '--d_snout', dest='d_snout', default=False, action='store_true',
@@ -210,8 +210,8 @@ elif dataset == 'pHD':
     avg_path = './data/predict-hd/linearaverageof100.npz'
     n_condns = 3
 
-elif dataset == 'qsm':
-    fpath = '/mnt/FileSystem-DeepLearning/vnm/qsm28_data/npz_files/train_npz/*.npz'
+elif dataset == 'qsm-simple':
+    fpath = '/mnt/FileSystem-DeepLearning/vnm/qsm28_data/realigned_bias-corrected_skullstripped_rescaled-0-1/*.npz'
     avg_path = '/mnt/FileSystem-DeepLearning/vnm/qsm28_data/rbcscr_mean.npz'
     n_condns = 1
 

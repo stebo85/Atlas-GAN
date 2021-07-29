@@ -2,3 +2,4 @@ ext/*
 ourdata
 qsm28_data
 logs
+__pycache__
